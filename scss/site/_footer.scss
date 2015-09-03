@@ -1,0 +1,17 @@
+// Add some whitespace above the footer for medium-up screens
+footer {
+	background-color: $jet;
+	color: $white;
+	&.row {
+		max-width: 100%;
+		width: 100%;
+	}
+	a {
+		color: $white-smoke;
+	}
+}
+@media #{$medium-up} {
+	footer.row {
+		margin-top: rem-calc(60);
+	}
+}

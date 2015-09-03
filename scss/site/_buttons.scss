@@ -1,0 +1,5 @@
+.primary-button {
+	@include button(
+		$bg: $tuatara
+	);
+}
