@@ -30,7 +30,7 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
 				<div class="entry-content">
-					<div class="medium-7 columns">
+					<div class="medium-10 medium-offset-1 columns">
 						<h3 class="home-section-title"><i class="fa fa-newspaper-o"></i> Recent News</h3>
 							<div class="home-recent-news">
 							<?php 
@@ -44,12 +44,29 @@ get_header(); ?>
 								<!-- the loop -->
 								<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 								<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+								
+									<?php if ( has_post_thumbnail() ) : ?>
+									<div class="row has-thumbnail">
+										<div class="columns medium-3">
+											<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(' thumbnail '); ?></a>
+										</div>
+										<div class="columns medium-9">
+											<header>
+												<h4 class="post-title"><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+												<p class="post-date subheader">– <?php echo get_the_date(); ?> –</p>
+											</header>
+											<?php the_excerpt(); ?>
+											<a role="button" title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>" class="button secondary small">Read More ></a>
+										</div>
+									</div>
+									<?php else : ?>
 									<header>
-										<h4><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-									<p class="post-date subheader">– <?php echo get_the_date(); ?> –</p>
+										<h4 class="post-title"><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+										<p class="post-date subheader">– <?php echo get_the_date(); ?> –</p>
 									</header>
 									<?php the_excerpt(); ?>
 									<a role="button" title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>" class="button secondary small">Read More ></a>
+									<?php endif; ?>
 								</article>
 								<hr>
 								<?php endwhile; ?>
@@ -67,19 +84,6 @@ get_header(); ?>
 						<!-- .home-recent-news -->
 					</div>
 					<!-- .medium-7 -->
-					<div class="medium-5 columns">
-						<h3 class="home-section-title"><i class="fa fa-comment-o"></i> Contacts</h3>
-						<address><strong>The Janusz Korczak Association of Canada</strong>
-						#203 - 5455 West Boulevard
-						Vancouver BC, V6M 3W5
-						<hr>
-						Tel. 604.733.6386 (Gina Dimant)
-						or 604.264.9990 (Jerry Nussbaum)
-						Fax. 604.264.8675
-						E-mail: <a href="mailto:jkorczakassn@shaw.ca">jkorczakassn@shaw.ca</a>
-						<a href="mailto:canadian.association@januszkorczak.ca">canadian.association@januszkorczak.ca</a></address>
-					</div>
-					<!-- .medium-6 -->
 				</div>
 				<!-- .entry-content -->
 		<?php do_action( 'foundationpress_after_content' ); ?>

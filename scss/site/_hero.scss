@@ -1,14 +1,28 @@
 #homepage-hero {
-	background-color: $jet;
+	background-color: $white;
 	padding: rem-calc(20) 0;
 	margin: - rem-calc(32) 0 rem-calc(32);
 	position: relative;
 	text-align: left;
 	height: auto;
+	border-bottom: 1px dotted $jet;
 
-		h1 { font-weight: 700; }
+		h1 { 
+			font-weight: 700;
+			color: $bronze;
 
-		h1 a, h4 { color: #fff; }
+			@media #{$medium-only} {
+				margin-top: 75px;
+			}
+
+			@media #{$large-up} { 
+				margin-top: 120px;
+			}
+
+
+		}
+
+		h1 a, h4 { color: $bronze; }
 
 		.floatingyeti img {
 			max-width: 30%;
@@ -20,6 +34,24 @@
 
 		p {
 			font-size: 1.5rem;
-			color: $white;
+			color: $jet;
+		}
+	}
+
+	.home-recent-news {
+		.post-title {
+			@media #{$small-only} {
+				font-size: 1.3rem;
+			}
+		}
+		.has-thumbnail {
+			.thumbnail {
+				margin-top: 5px;
+			}
+			.post-title {
+				@media #{$small-only} {
+					margin-top: 15px;
+				}
+			}
 		}
 	}
