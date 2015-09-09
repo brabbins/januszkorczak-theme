@@ -30,6 +30,7 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
 				<div class="entry-content">
+
 					<div class="medium-10 medium-offset-1 columns">
 						<h3 class="home-section-title"><i class="fa fa-newspaper-o"></i> Recent News</h3>
 							<div class="home-recent-news">

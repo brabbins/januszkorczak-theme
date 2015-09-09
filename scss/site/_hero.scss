@@ -11,12 +11,19 @@
 			font-weight: 700;
 			color: $bronze;
 
+    		@media #{$small} {
+				font-size: 2.5rem;
+	    		line-height: 3rem;	
+    		}
+
 			@media #{$medium-only} {
 				margin-top: 75px;
 			}
 
 			@media #{$large-up} { 
 				margin-top: 120px;
+				font-size: 4.5rem;
+    			line-height: 5rem;
 			}
 
 
