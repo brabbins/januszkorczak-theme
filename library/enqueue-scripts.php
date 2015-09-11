@@ -33,7 +33,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	wp_register_script( 'foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'), '5.5.2', true );
 
 	// Enqueue all registered scripts.
-	wp_enqueue_script( 'modernizr' );
+	// wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'fastclick' );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'foundation' );
@@ -44,15 +44,15 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 endif;
 
 //add link for google fonts
-function google_fonts() {
-	$query_args = array(
-		'family' => 'Open+Sans:400,300,300italic,400italic,700,700italic',
-		'subset' => 'latin,latin-ext',
-	);
+// function google_fonts() {
+// 	$query_args = array(
+// 		'family' => 'Open+Sans:400,300,300italic,400italic,700,700italic',
+// 		'subset' => 'latin,latin-ext',
+// 	);
 	
-	wp_register_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
-}
+// 	wp_register_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+// }
             
-add_action('wp_enqueue_scripts', 'google_fonts');
+// add_action('wp_enqueue_scripts', 'google_fonts');
 
 ?>
