@@ -63,15 +63,15 @@ img.alignright {
 		line-height: 1.7;
 	}
 	a {
-		color: $bronze;
+		color: $ja-secondary;
 		text-decoration: underline;
 		&:hover {
 			text-decoration: none;
-			color: $steel;
+			color: $ja-hover;
 		}
 	}
 	h1, h2, h3, h4, h5, h6 {
-		color: $bronze;
+		color: $ja-secondary;
 
 		font-weight: 400;
 		a, button, a.button {

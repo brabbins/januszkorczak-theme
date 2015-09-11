@@ -11,3 +11,21 @@ p.wp-caption-text{
   color: $charcoal;
   padding:rem-calc(10) 0;
 }
+.entry-title {
+	margin-top: 20px;
+	margin-bottom: 55px;
+	font-size: 3rem;
+}
+.page {
+	.entry-title {
+		letter-spacing: 0.4rem; 
+	}	
+}
+.widget_archive {
+	ul {
+		margin-left: 0;
+	}
+	li {
+		list-style: none;
+	}
+}

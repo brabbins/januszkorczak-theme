@@ -9,7 +9,6 @@
 
 		h1 { 
 			font-weight: 700;
-			color: $bronze;
 
     		@media #{$small} {
 				font-size: 2.5rem;
@@ -28,8 +27,6 @@
 
 
 		}
-
-		h1 a, h4 { color: $bronze; }
 
 		.floatingyeti img {
 			max-width: 30%;
