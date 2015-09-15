@@ -65,7 +65,6 @@ module.exports = function(grunt) {
         },
         dist: {
           src: [
-
           // Foundation core
           'bower_components/foundation/js/foundation/foundation.js',
 
@@ -89,7 +88,6 @@ module.exports = function(grunt) {
 
           // Include your own custom scripts (located in the custom folder)
           'js/custom/*.js'
-
           ],
           // Finally, concatinate all the files above into one single file
           dest: 'js/foundation.js',
@@ -106,7 +104,7 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      grunt: { files: ['Gruntfile.js'] },
+      // grunt: { files: ['Gruntfile.js'] },
 
       sass: {
         files: 'scss/**/*.scss',

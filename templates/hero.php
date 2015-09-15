@@ -31,12 +31,12 @@ get_header(); ?>
 
 				<div class="entry-content">
 
-					<div class="medium-10 medium-offset-1 columns">
+					<div class="medium-12 large-8 columns">
 						<h3 class="home-section-title"><i class="fa fa-newspaper-o"></i> Recent News</h3>
 							<div class="home-recent-news">
 							<?php 
 							// the query
-							$the_query = new WP_Query( 'posts_per_page=3' ); ?>
+							$the_query = new WP_Query( 'posts_per_page=3&category_name=Uncategorized' ); ?>
 
 							<?php if ( $the_query->have_posts() ) : ?>
 
@@ -85,6 +85,35 @@ get_header(); ?>
 						<!-- .home-recent-news -->
 					</div>
 					<!-- .medium-7 -->
+					<aside class="home-sidebar large-4 columns">
+						<?php dynamic_sidebar( 'home-sidebar-widgets' ); ?>
+						<?php 
+						// the query
+						$the_query = new WP_Query( 'posts_per_page=1&category_name=Slideshow' ); ?>
+
+						<?php if ( $the_query->have_posts() ) : ?>
+
+							<!-- pagination here -->
+
+							<!-- the loop -->
+							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+								<header>
+									<h3 class="post-title"><h3><i class="fa fa-picture-o"></i> Slideshow:<br>
+										<small><?php the_title(); ?></small></h3>
+								</header>
+								<?php the_content(); ?>
+							<?php endwhile; ?>
+							<!-- end of the loop -->
+
+							<!-- pagination here -->
+
+							<?php wp_reset_postdata(); ?>
+
+						<?php else : ?>
+							<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+						<?php endif; ?>
+					</aside>
+					<!-- aside -->
 				</div>
 				<!-- .entry-content -->
 		<?php do_action( 'foundationpress_after_content' ); ?>
