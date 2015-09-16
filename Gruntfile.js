@@ -59,6 +59,33 @@ module.exports = function(grunt) {
         },
       },
 
+    watch: {
+      grunt: { files: ['Gruntfile.js'] },
+
+      sass: {
+        files: 'scss/**/*.scss',
+        tasks: ['sass'],
+        options: {
+              livereload:true,
+            }
+      },
+
+      scripts: {
+        files: 'js/custom/**/*.js',
+        tasks: ['concat', 'uglify'],
+        options: {
+          livereload:true,
+        }
+      },
+
+       all: {
+        files: '**/*.php',
+        options: { 
+            livereload:true,
+        }
+      }
+    },
+
     concat: {
         options: {
           separator: ';',
@@ -101,34 +128,8 @@ module.exports = function(grunt) {
           'js/foundation.js': ['js/foundation.js']
         }
       }
-    },
-
-    watch: {
-      // grunt: { files: ['Gruntfile.js'] },
-
-      sass: {
-        files: 'scss/**/*.scss',
-        tasks: ['sass'],
-        options: {
-              livereload:true,
-            }
-      },
-
-      js: {
-        files: 'js/custom/**/*.js',
-        tasks: ['concat', 'uglify'],
-        options: {
-          livereload:true,
-        }
-      },
-
-       all: {
-        files: '**/*.php',
-        options: {
-            livereload:true,
-        }
-      }
     }
+
   });
 
   grunt.loadNpmTasks('grunt-sass');

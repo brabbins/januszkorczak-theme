@@ -97,3 +97,13 @@ img.alignright {
 		text-decoration: none
 	}
 }
+.home-sidebar {
+	.gallery-caption {
+		display: none;
+	}
+}
+.gallery-caption {
+	font-size: 12px;
+	padding: 0 10px 10px;
+	display: none;
+}
