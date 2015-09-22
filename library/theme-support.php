@@ -29,6 +29,9 @@ function foundationpress_theme_support() {
 
 	// Declare WooCommerce support per http://docs.woothemes.com/document/third-party-custom-theme-compatibility/
 	add_theme_support( 'woocommerce' );
+
+	//Add Custom Background support
+	add_theme_support( 'custom-background' );
 }
 
 add_action( 'after_setup_theme', 'foundationpress_theme_support' );

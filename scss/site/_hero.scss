@@ -1,11 +1,11 @@
 #homepage-hero {
 	background-color: $white;
-	padding: rem-calc(20) 0;
+	// padding: rem-calc(20) 0;
+	padding: 0;
 	margin: - rem-calc(32) 0 rem-calc(32);
 	position: relative;
 	text-align: left;
 	height: auto;
-	border-bottom: 1px dotted $jet;
 
 		h1 { 
 			font-weight: 700;
@@ -32,6 +32,10 @@
 			max-width: 30%;
 			position: absolute;
 			right: rem-calc(100);
+		}
+
+		img {
+			width: 100%;
 		}
 
 		.download { margin-top: rem-calc(20); }

@@ -5,23 +5,9 @@ Template Name: Hero
 get_header(); ?>
 
 <header id="homepage-hero" role="banner">
-	<div class="row">
-		<div class="small-12 medium-6 columns">
-			<h1><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			<p><?php bloginfo( 'description' ); ?></p>
-		</div>
-
-		<div class="medium-6 columns">
-			<?php if ( has_post_thumbnail() ) : ?>
-			<div class="show-for-medium-up">
-				<?php the_post_thumbnail(); ?>
-			</div>
-			<?php 
-			endif;
-			?>
-		</div>
-	</div>
-
+	<?php if ( has_post_thumbnail() ) : 
+		the_post_thumbnail();
+	endif; ?>
 </header>
 
 	<div class="row">
