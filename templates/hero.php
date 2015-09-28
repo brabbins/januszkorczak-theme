@@ -4,7 +4,7 @@ Template Name: Hero
 */
 get_header(); ?>
 
-<header id="homepage-hero" role="banner">
+<header id="homepage-hero" classrole="banner">
 	<?php if ( has_post_thumbnail() ) : 
 		the_post_thumbnail();
 	endif; ?>
@@ -84,8 +84,7 @@ get_header(); ?>
 							<!-- the loop -->
 							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 								<header>
-									<h3 class="post-title"><h3><i class="fa fa-picture-o"></i> Slideshow:<br>
-										<small><?php the_title(); ?></small></h3>
+									<h3 class="post-title"><i class="fa fa-picture-o"></i> Slideshow: <?php the_title(); ?></h3>
 								</header>
 								<?php the_content(); ?>
 							<?php endwhile; ?>
